@@ -12,10 +12,9 @@ class OrderTable extends Table
             'headers' => [
                 'ID',
                 'Status',
-                'Pizza name',
                 'Time Ago'
             ],
-            'rows' => $orders
+            'rows' => $comments
         ]);
     }
 }

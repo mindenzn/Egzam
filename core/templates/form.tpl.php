@@ -1,7 +1,7 @@
-<form <?php print form_attr($data); ?>>
+<form class="form" <?php print form_attr($data); ?>>
     <?php foreach ($data['fields'] as $field_id => $field): ?>
         <?php if (isset($field['label'])): ?>
-            <label>
+            <label class="form--label">
             <p><?php print $field['label']; ?></p>
 
         <?php endif; ?>
@@ -16,7 +16,7 @@
         <?php elseif ($field['type'] === 'textarea'): ?>
             <textarea <?php print textarea_attr($field_id, $field); ?>><?php print $field['value'] ?? ''; ?></textarea>
         <?php else: ?>
-            <input <?php print input_attr($field_id, $field); ?>>
+            <input class="form--input" <?php print input_attr($field_id, $field); ?>>
         <?php endif; ?>
         <?php if (isset($field['error'])): ?>
             <p class="error"><?php print $field['error']; ?></p>
@@ -24,7 +24,7 @@
         </label>
     <?php endforeach; ?>
     <?php foreach ($data['buttons'] as $button_id => $button): ?>
-        <button <?php print button_attr($button_id, $button); ?>>
+        <button class="form--button" <?php print button_attr($button_id, $button); ?>>
             <?php print $button['title']; ?>
         </button>
     <?php endforeach; ?>

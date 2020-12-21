@@ -4,8 +4,6 @@ namespace App\Controllers\Common;
 
 use App\App;
 use App\Views\BasePage;
-use App\Views\Forms\Admin\Pizza\PizzaCreateForm;
-use App\Views\Forms\Admin\Pizza\PizzaUpdateForm;
 use Core\View;
 use Core\Views\Link;
 
@@ -28,7 +26,7 @@ class HomeController
     public function __construct()
     {
         $this->page = new BasePage([
-            'title' => 'Pizzas',
+            'title' => 'SportoKlubas',
             'js' => ['/media/js/home.js']
         ]);
     }
@@ -44,14 +42,8 @@ class HomeController
         $user = App::$session->getUser();
 
         if ($user) {
-            if ($user['role'] == 'admin') {
-                $forms = [
-                    'create' => (new PizzaCreateForm())->render(),
-                    'update' => (new PizzaUpdateForm())->render()
-                ];
-            }
 
-            $heading = "Zdarova, {$user['user_name']}";
+            $heading = "Sveiki prisijungę, {$user['user_name']}";
             $links = [
                 'login' => (new Link([
                     'url' => App::$router::getUrl('logout'),
@@ -59,7 +51,7 @@ class HomeController
                 ]))->render()
             ];
         } else {
-            $heading = 'Jus neprisijunges';
+            $heading = 'Jūs neprisijungęs';
             $links = [
                 'login' => (new Link([
                     'url' => App::$router::getUrl('login'),
@@ -69,7 +61,7 @@ class HomeController
         }
 
         $content = (new View([
-            'title' => 'Welcome to our pizzaria',
+            'title' => '',
             'heading' => $heading,
             'forms' => $forms ?? [],
             'links' => $links ?? []

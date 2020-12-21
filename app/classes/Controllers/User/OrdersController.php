@@ -15,8 +15,8 @@ class OrdersController extends UserController
     {
         parent::__construct();
         $this->page = new BasePage([
-            'title' => 'Orders',
-            'js' => ['/media/js/user/orders.js']
+            'title' => 'About',
+            'js' => ['/media/js/user/about.js']
         ]);
     }
 

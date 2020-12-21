@@ -1,189 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand&display=swap');
-
+/* Default settings */
 * {
     box-sizing: border-box;
-    margin: 0;
+    width: 800px;
+    margin: 0 auto;
     padding: 0;
+    font-family: "Comic Sans MS";
 }
 
-body {
-    background-color: white;
+/* Header */
+
+.header {
+    height: 70px;
+    max-width: 800px;
+}
+
+.header--nav {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    height: 70px;
+    background-image: linear-gradient(to top, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
 }
 
-main {
-    padding-top: 50px;
+.header--nav-ul {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-
-h1, h2, h3, h4 {
-    margin: 10px;
-}
-
-main {
-    margin-bottom: 50px;
-}
-
-.title {
-    font-family: 'Bangers', cursive;
-    font-size: 50px;
-    margin: 50px;
-}
-
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-tr, td, th {
-    margin: 10px;
-    padding: 10px;
-}
-
-
-/*######################
-##  Form
-########################*/
-
-form {
-    width: 400px;
-    margin: 20px 0;
-    background-color: orangered;
-    padding: 20px;
-}
-
-form p {
-    font-weight: bold;
-}
-
-label {
-    font-family: Arial;
-}
-
-input {
-    padding: 7px;
-    margin: 5px;
-}
-
-textarea {
-    padding: 20px;
-}
-
-button {
-    padding: 7px;
-    margin: 5px;
-    background: orangered;
-    color: white;
-    width: 150px;
-    border: 2px solid white;
-    font-family: 'Bangers', cursive;
-    cursor: pointer;
-}
-
-button:hover {
-    background: white;
-    color: orangered;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: orangered;
-}
-
-.modal .close {
-    color: white;
-    font-size: 50px;
-    cursor: pointer;
-}
-
-.error {
-    color: red;
-    font-size: .8em;
-}
-
-/*######################
-##  Navigation
-########################*/
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: orangered;
-    width: 100vw;
-    padding: 20px;
-    font-family: 'Bangers', cursive;
-    font-size: 40px;
-}
-
-ul {
-    display: flex;
-    justify-content: flex-end;
     list-style: none;
-    padding: 0;
-    align-items: center;
+}
+
+li {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: translateY(2px);
+    border: 1px solid black;
+    transition: 0.3s;
 }
 
 a {
-    padding: 10px;
-    color: white;
-    background-color: orangered;
-    text-decoration: none;
-    /*margin: 30px;*/
-    font-size: 25px;
-    cursor: pointer;
-    transition: 0.4s;
-    font-family: 'Bangers', cursive;
-}
-
-a:hover {
     color: black;
+    text-decoration: none;
 }
 
+/* Main page */
 
-/*######################
-##  Index Page
-########################*/
-
-#pizza-grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    align-content: center;
-    justify-items: center;
-    margin: 0 auto;
+.hero--img {
+    height: 300px;
+    width: 100%;
+    border-top: blueviolet;
+    background-image: url("../img/gymtitle.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 800px 390px;
 }
-
-#pizza-grid-container .data-item {
-    display: flex;
-    width: 250px;
+.hero--container{
+    width: 800px;
+    max-width: 800px;
     height: 400px;
+    margin: 20px;
+}
+
+/* Form */
+
+.form {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid gray;
+    width: 800px;
+    margin-top: 50px;
+}
+
+.form--label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form--input {
+    margin-top: 10px;
+    padding: 7px;
+    width: 30%;
+}
+
+.form--button {
+    margin-top: 30px;
     padding: 5px;
-}
-
-#pizza-grid-container img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    transition: 0.5s ease-in-out;
-    border-radius: 100%;
-    margin: 15px;
-}
-
-#pizza-grid-container img:hover {
-    transform: scale(1.1);
+    width: 20%;
 }

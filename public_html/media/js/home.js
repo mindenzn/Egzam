@@ -2,23 +2,18 @@
 
 const endpoints = {
     get: 'api/pizza/get',
-    create: 'api/pizza/create',
     edit: 'api/pizza/edit',
     update: 'api/pizza/update',
     delete: 'api/pizza/delete',
-    order: 'api/order/create'
+    commit: 'api/commit/create'
 };
 
 /**
  * This defines how JS code selects elements by ID
  */
 const selectors = {
-    forms: {
-        create: 'pizza-create-form',
-        update: 'pizza-update-form'
-    },
     modal: 'update-modal',
-    grid: 'pizza-grid-container'
+    grid: 'offers-container'
 }
 
 /**
@@ -470,7 +465,7 @@ const grid = {
 };
 
 /**
- * Core page functionality
+ * Core page functionalityF
  */
 const app = {
     init: function () {
