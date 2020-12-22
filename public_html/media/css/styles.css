@@ -169,6 +169,15 @@ footer > p {
     width: 20%;
 }
 
+.form--text {
+    color: #C90000;
+    font-size: 14px;
+    margin: 10px 0;
+}
+.form--error{
+    color: #C90000;
+    font-size: 14px;
+}
 
 /* <<<< RESPONSIVE >>>>*/
 
@@ -228,5 +237,18 @@ footer > p {
     /* <<<< Footer >>>> */
     footer {
         width: 400px;
+    }
+
+    /* <<<< From >>>> */
+    .form {
+        width: 400px;
+    }
+
+    .form--input {
+        width: 50%;
+    }
+
+    .form--button {
+        width: 35%;
     }
 }

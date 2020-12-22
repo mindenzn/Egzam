@@ -19,7 +19,7 @@
             <input class="form--input" <?php print input_attr($field_id, $field); ?>>
         <?php endif; ?>
         <?php if (isset($field['error'])): ?>
-            <p class="error"><?php print $field['error']; ?></p>
+            <p class="form--error"><?php print $field['error']; ?></p>
         <?php endif; ?>
         </label>
     <?php endforeach; ?>
@@ -29,6 +29,7 @@
         </button>
     <?php endforeach; ?>
     <?php if (isset($data['error'])): ?>
-        <p class="error"><?php print $data['error']; ?></p>
+        <p class="form--error"><?php print $data['error']; ?></p>
     <?php endif; ?>
+    <p class="form--text"> * Laukai yra privalomi</p>
 </form>

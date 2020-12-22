@@ -16,7 +16,7 @@ use App\App;
 function validate_user_unique(string $field_input, array &$field): bool
 {
     if (App::$db->getRowWhere('users', ['email' => $field_input])) {
-        $field['error'] = 'User already exists';
+        $field['error'] = 'Toks vartotojas jau egzistuoja';
 
         return false;
     }
@@ -45,7 +45,7 @@ function validate_login(array $filtered_input, array &$form): bool
         return true;
     }
 
-    $form['error'] = 'Incorrect';
+    $form['error'] = 'Blogai įvestas slaptažodis';
 
     return false;
 }
@@ -59,4 +59,42 @@ function validate_row_exists(string $field_input, array &$field): bool
     $field['error'] = 'Tokia eilute neegzistuoja';
 
     return false;
+}
+
+function validate_symbols(string $field_value, array &$field): bool
+{
+    if (is_numeric($field_value)) {
+        $field['error'] = 'Varde ar Pavardėje negali būti skaičių';
+
+        return false;
+    };
+
+    return true;
+}
+
+function validate_max_symbols(string $field_value, array &$field): bool
+{
+    if (strlen($field_value) > 40) {
+        $field['error'] = 'Viršytas maksimalių symbolių skaičius';
+        return false;
+    }
+    return true;
+}
+
+function validate_user_exists(string $field_input, array &$field): bool
+{
+    if (!App::$db->getRowWhere('users', ['email' => $field_input])) {
+        $field['error'] = 'Vartotojas su tokiu El. paštu neegzistuoja';
+        return false;
+    }
+    return true;
+}
+
+function validate_wrong_password(string $field_input, array &$field): bool
+{
+    if (!App::$db->getRowWhere('users', ['password'=> $field_input])) {
+        $field['error'] = 'Blogai įvestas slaptažodis';
+        return false;
+    }
+    return true;
 }

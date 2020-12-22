@@ -10,8 +10,36 @@ class RegisterForm extends Form
     {
         parent::__construct([
             'fields' => [
+                'name' => [
+                    'label' => 'Vardas *',
+                    'type' => 'text',
+                    'validators' => [
+                        'validate_field_not_empty',
+                        'validate_symbols',
+                        'validate_max_symbols',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Įveskite savo vardą',
+                        ]
+                    ]
+                ],
+                'surname' => [
+                    'label' => 'Pavardė *',
+                    'type' => 'text',
+                    'validators' => [
+                        'validate_field_not_empty',
+                        'validate_symbols',
+                        'validate_max_symbols',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Įveskite savo pavardę',
+                        ]
+                    ]
+                ],
                 'email' => [
-                    'label' => 'Email',
+                    'label' => 'Elektroninis paštas *',
                     'type' => 'text',
                     'validators' => [
                         'validate_field_not_empty',
@@ -20,58 +48,51 @@ class RegisterForm extends Form
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter email',
+                            'placeholder' => 'Įveskite savo elektroninį paštą',
                         ]
                     ]
                 ],
-                'user_name' => [
-                    'label' => 'Name',
+
+                'password' => [
+                    'label' => 'Slaptažodis *',
+                    'type' => 'password',
+                    'validators' => [
+                        'validate_field_not_empty',
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Įveskite slaptažodį',
+                        ]
+                    ]
+                ],
+                'phone' => [
+                    'label' => 'Telefono numeris',
+                    'type' => 'number',
+                    'validators' => [
+                    ],
+                    'extra' => [
+                        'attr' => [
+                            'placeholder' => 'Įveskite savo telefono numerį',
+                        ]
+                    ]
+                ],
+                'address' => [
+                    'label' => 'Jūsų adresas',
                     'type' => 'text',
                     'validators' => [
-                        'validate_field_not_empty',
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter your full name',
-                        ]
-                    ]
-                ],
-                'password' => [
-                    'label' => 'Password',
-                    'type' => 'password',
-                    'validators' => [
-                        'validate_field_not_empty',
-                    ],
-                    'extra' => [
-                        'attr' => [
-                            'placeholder' => 'Enter password',
-                         ]
-                    ]
-                ],
-                'password_repeat' => [
-                    'label' => 'Password Repeat',
-                    'type' => 'password',
-                    'validators' => [
-                        'validate_field_not_empty',
-                    ],
-                    'extra' => [
-                        'attr' => [
-                            'placeholder' => 'Repeat password',
+                            'placeholder' => 'Įveskite adresą',
                         ]
                     ]
                 ],
             ],
             'buttons' => [
                 'register' => [
-                    'title' => 'Register',
+                    'title' => 'Registruotis',
                 ]
             ],
-            'validators' => [
-                'validate_fields_match' => [
-                    'password',
-                    'password_repeat'
-                ]
-            ]
         ]
     );
 

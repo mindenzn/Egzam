@@ -11,34 +11,35 @@ public function __construct()
     parent::__construct([
         'fields' => [
             'email' => [
-                'label' => 'Email',
+                'label' => 'Elektroninis paštas *',
                 'type' => 'text',
                 'validators' => [
                     'validate_field_not_empty',
                     'validate_email',
+                    'validate_user_exists'
                 ],
                 'extra' => [
                     'attr' => [
-                        'placeholder' => 'Įvesk emailą',
+                        'placeholder' => 'Įveskite savo elektroninį paštą',
                     ],
                 ],
             ],
             'password' => [
-                'label' => 'Password',
+                'label' => 'Slaptažodis *',
                 'type' => 'password',
                 'validators' => [
                     'validate_field_not_empty',
                 ],
                 'extra' => [
                     'attr' => [
-                        'placeholder' => 'Įvesk slaptažodį',
+                        'placeholder' => 'Įveskite slaptažodį',
                     ],
                 ],
             ],
         ],
         'buttons' => [
             'login' => [
-                'title' => 'Login',
+                'title' => 'Prisijungti',
             ],
         ],
         'validators' => [
