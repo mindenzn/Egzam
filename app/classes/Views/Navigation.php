@@ -19,12 +19,12 @@ class Navigation extends View
 
         if (App::$session->getUser()) {
             return $nav + [
-                    App::$router::getUrl('about') => 'Apie Mus',
+                    App::$router::getUrl('feedback') => 'Atsiliepimai',
                     App::$router::getUrl('logout') => 'Atsijungti',
                 ];
         } else {
             return $nav + [
-                    App::$router::getUrl('about') => 'Apie Mus',
+                    App::$router::getUrl('feedback') => 'Atsiliepimai',
                     App::$router::getUrl('register') => 'Registruotis',
                     App::$router::getUrl('login') => 'Prisijungti',
                 ];
