@@ -14,10 +14,9 @@ class InstallController
         App::$db->createTable('users');
         App::$db->insertRow('users', ['email' => 'test@test.lt', 'password' => 'test', 'user_name' => 'testas', 'role' => 'user']);
         App::$db->createTable('offers');
-        App::$db->insertRow('offers', ['offer' => 'Privatus treneris', 'img' => '../img/trainer.jpg', 'offer_info' => 'Privatus treneris Jūsų individualiai mankštai']);
-        App::$db->insertRow('offers', ['offer' => 'Sauna', 'img' => '../img/trainer.jpg', 'offer_info' => 'Sauna, atsigauti po mankštos']);
-        App::$db->insertRow('offers', ['offer' => 'Masažas', 'img' => '../img/trainer.jpg', 'offer_info' => 'Masažas Jūsų pavargusiems raumenims']);
-
+        App::$db->insertRow('offers', ['offer' => 'Privatus treneris', 'img' => 'trainer', 'offer_info' => 'Privatus treneris Jūsų individualiai mankštai']);
+        App::$db->insertRow('offers', ['offer' => 'Sauna', 'img' => 'sauna', 'offer_info' => 'Sauna, atsigauti po mankštos']);
+        App::$db->insertRow('offers', ['offer' => 'Masažas', 'img' => 'masaze', 'offer_info' => 'Masažas Jūsų pavargusiems raumenims']);
 
     }
 }

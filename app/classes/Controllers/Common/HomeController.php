@@ -64,7 +64,8 @@ class HomeController
             'title' => '',
             'heading' => $heading,
             'forms' => $forms ?? [],
-            'links' => $links ?? []
+            'links' => $links ?? [],
+            'offers' => App::$db->getRowsWhere('offers'),
         ]))->render(ROOT . '/app/templates/content/index.tpl.php');
 
         $this->page->setContent($content);

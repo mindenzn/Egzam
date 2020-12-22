@@ -1,13 +1,12 @@
-/* Default settings */
+/* <<<< Default settings >>>> */
 * {
     box-sizing: border-box;
-    width: 800px;
     margin: 0 auto;
     padding: 0;
     font-family: "Comic Sans MS";
 }
 
-/* Header */
+/* <<<< Header >>>> */
 
 .header {
     height: 70px;
@@ -22,6 +21,7 @@
 }
 
 .header--nav-ul {
+    width: 800px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -37,16 +37,24 @@ li {
 
 li:hover {
     transform: translateY(2px);
-    border: 1px solid black;
+    border: 1px solid white;
     transition: 0.3s;
 }
 
 a {
-    color: black;
+    font-size: 20px;
+    color: white;
     text-decoration: none;
 }
 
-/* Main page */
+/* <<<< Main page >>>> */
+
+.main--container {
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
 
 .hero--img {
     height: 300px;
@@ -57,22 +65,86 @@ a {
     background-position: top;
     background-size: 800px 390px;
 }
-.hero--container{
+
+.hero--container {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 50px;
+    background-image: linear-gradient(to bottom, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
     width: 800px;
-    max-width: 800px;
     height: 400px;
-    margin: 20px;
+    padding: 20px;
 }
 
-/* Form */
+.hero--offers {
+    border: 1px solid gray;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    margin: 10px 5px;
+    font-size: 20px;
+}
+
+span {
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin: 0 5px;
+
+}
+
+.hero--offers-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 40%;
+}
+
+.trainer {
+    background-image: url("../img/trainer.jpg");
+}
+
+.masaze {
+    background-image: url("../img/masaze.jpg");
+}
+
+.sauna {
+    background-image: url("../img/sauna.jpg");
+}
+
+/* <<<< Footer >>>> */
+
+footer {
+    height: 70px;
+    width: 800px;
+    background-image: linear-gradient(to top, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    color: white;
+    font-size: 13px;
+}
+
+/* <<<< Form >>>> */
 
 .form {
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 800px;
-    margin-top: 50px;
+    background-image: linear-gradient(to bottom, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
 }
 
 .form--label {
@@ -95,4 +167,66 @@ a {
     margin-top: 30px;
     padding: 5px;
     width: 20%;
+}
+
+
+/* <<<< RESPONSIVE >>>>*/
+
+
+@media only screen and (max-width: 400px) {
+
+    /* <<<< Header >>>*/
+    a {
+        font-size: 15px;
+    }
+
+    .header--nav-ul {
+        justify-content: center;
+    }
+
+
+    li:hover {
+        transform: translateY(2px);
+        border: 1px solid white;
+        transition: 0.3s;
+    }
+
+    /* <<<< Main page >>>> */
+    .main--container {
+        width: 400px;
+    }
+
+    .hero--img {
+        background-size: 400px 250px;
+        background-position: top;
+        width: 400px;
+        height: 150px;
+    }
+
+    .hero--container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 400px;
+        grid-gap: 0;
+        padding: 20px 20px 0 20px;
+    }
+
+    .hero--offers {
+        margin-bottom: 20px;
+    }
+
+    .hero--offers-img {
+        background-position: top;
+    }
+
+    iframe {
+        height: 300px;
+        width: 400px;
+    }
+
+    /* <<<< Footer >>>> */
+    footer {
+        width: 400px;
+    }
 }
