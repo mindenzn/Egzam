@@ -210,10 +210,19 @@ footer > p {
     font-size: 14px;
 }
 
-.feedback--container > a{
-    padding: 10px;
+.feedback--container > a {
+    margin: 10px;
+    padding: 5px;
+    transition: 0.3s;
 }
-.message{
+
+.feedback--container > a:hover {
+    border: 1px solid white;
+    transition: 0.3s;
+
+}
+
+.message {
     padding: 10px;
 }
 
@@ -221,7 +230,7 @@ footer > p {
 
 
 @media only screen and (max-width: 400px) {
-   main{
+    main {
        background-image: linear-gradient(to bottom, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
        min-height: 82vh;
        max-width: 400px;
