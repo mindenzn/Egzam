@@ -5,6 +5,12 @@
     padding: 0;
     font-family: "Comic Sans MS";
 }
+main{
+    background-image: linear-gradient(to bottom, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
+    min-height: 82vh;
+    max-width: 800px;
+}
+
 
 /* <<<< Header >>>> */
 
@@ -144,7 +150,6 @@ footer > p {
     justify-content: center;
     align-items: center;
     width: 800px;
-    background-image: linear-gradient(to bottom, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
 }
 
 .form--label {
@@ -185,7 +190,6 @@ footer > p {
 .feedback--container {
     width: 800px;
     color: white;
-    background-image: linear-gradient(to bottom, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
 }
 
 .feedback--title {
@@ -206,15 +210,30 @@ footer > p {
     font-size: 14px;
 }
 
+.feedback--container > a{
+    padding: 10px;
+}
+.message{
+    padding: 10px;
+}
 
 /* <<<<<<<<<<<<<<<< RESPONSIVE >>>>>>>>>>>>>>>>>>> */
 
 
 @media only screen and (max-width: 400px) {
+   main{
+       background-image: linear-gradient(to bottom, #2e0537, #333973, #106da9, #00a2d1, #12d8eb);
+       min-height: 82vh;
+       max-width: 400px;
+   }
 
     /* <<<< Header >>>*/
     a {
         font-size: 15px;
+    }
+
+    .header--nav {
+        width: 400px;
     }
 
     .header--nav-ul {
