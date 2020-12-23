@@ -10,10 +10,10 @@ class FeedbackTable extends Table
     {
         parent::__construct([
             'headers' => [
-                'ID',
-                'Name',
-                'Comment',
-                'Date'
+                'Eil. nr',
+                'Vardas',
+                'Komentaras',
+                'Data'
             ],
             'rows' => $feedbacks
         ]);

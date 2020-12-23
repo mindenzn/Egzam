@@ -43,7 +43,8 @@ class FeedbackApiController
                 'id' => $id,
                 'name' => $user['name'],
                 'comment' => $row['comment'],
-                'date' => $row['date']
+                'date' => $row['date'],
+
             ];
         }
 

@@ -98,3 +98,11 @@ function validate_wrong_password(string $field_input, array &$field): bool
     }
     return true;
 }
+function validate_max_500(string $field_value, array &$field): bool
+{
+    if (strlen($field_value) > 500) {
+        $field['error'] = 'Viršytas maksimalių symbolių skaičius';
+        return false;
+    }
+    return true;
+}

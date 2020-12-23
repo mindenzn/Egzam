@@ -32,11 +32,11 @@ class FeedbackController
             ];
 
         } else {
-            $msg = 'Want to write a comment?';
+            $msg = 'Nori palikti komentarą?';
             $links = [
                 'register' => (new Link([
                     'url' => App::$router::getUrl('register'),
-                    'text' => 'Register'
+                    'text' => 'Registruotis'
                 ]))->render()
             ];
         }
@@ -44,7 +44,7 @@ class FeedbackController
         $table = new FeedbackTable();
 
         $content = (new View([
-            'title' => 'Feedbacks:',
+            'title' => 'Atsiliepimai:',
             'table' => $table->render(),
             'forms' => $forms ?? [],
             'message' => $msg ?? [],

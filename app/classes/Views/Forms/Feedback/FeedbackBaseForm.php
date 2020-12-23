@@ -12,14 +12,15 @@ class FeedbackBaseForm extends Form
         parent::__construct([
             'fields' => [
                 'comment' => [
-                    'label' => 'Comment',
+                    'label' => 'Komentaras *',
                     'type' => 'textarea',
                     'validators' => [
-                        'validate_field_not_empty'
+                        'validate_field_not_empty',
+                        'validate_max_500'
                     ],
                     'extra' => [
                         'attr' => [
-                            'placeholder' => 'Enter your comments here',
+                            'placeholder' => 'Įvesk savo komentarą čia',
                         ],
                     ],
                 ],
